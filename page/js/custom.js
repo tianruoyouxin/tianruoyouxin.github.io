@@ -9,7 +9,7 @@ appId: 'J6ENodl47uj9S8OprHIQLTlj-gzGzoHsz',
 appKey: 'XmTprVsONLA9BAmseYaNnK6G',
 notify: false,
 placeholder: '温馨提示：添加邮箱可以更及时的得到回复！',
-avatar:'',
+avatar:'mm',
 guest_info:['nick', 'mail'],
 path:path,
 lang: isEN ? 'en' : 'zh-cn',
@@ -24,8 +24,16 @@ $(".vmail").css({"fontSize":size,"fontFamily":fontfamily});
 $(".veditor").css({"fontSize":size,"fontFamily":fontfamily});
 $(".vpreview").css({"fontSize":size,"fontFamily":fontfamily});
 $(".vemoji-btn").css({"fontSize":size,"fontFamily":fontfamily});
-$(".vnick").css({"fontSize":size,"fontFamily":fontfamily});
 $(".vpreview-btn").css({"fontSize":size,"fontFamily":fontfamily});
+$(".vnick").css({"fontSize":size,"fontFamily":fontfamily});
+
+///汉化按钮
+$(".vemoji-btn").html('表情');
+$(".vpreview-btn").html('预览');
+
+///删除右下角版权信息，请尽可能保留该信息，以保证对于作者的支持
+$(".info").html('');
+
 ///插入图片功能
 var vimagehtml="<span class=vimage-btn style='font-size: 14px;font-family: 微软雅黑;'>图片";
 var divline=" | ";
@@ -33,6 +41,7 @@ $('.vemoji-btn').before(vimagehtml)
 $('.vemoji-btn').before(divline) 
 $('.vemojis').after("<div class='setimage' border='1px solid #f0f0f0' style=' border:1px solid #f0f0f0' ><iframe frameborder='0' src='./page/smms.html' width='100%'  scrolling='no' height='32px'</iframe></div> ") 
 $(".setimage")[0].style.display='none';
+
 ///设置图片区域显示时机
 $(document).ready(function() {
   $(function() {
